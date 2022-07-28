@@ -5,6 +5,9 @@ jobs:
     name: publish docker
     runs-on: ubuntu-latest
     steps:
+      - name: Update CA
+        run: |
+          sudo apt-get install --reinstall ca-certificates
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
