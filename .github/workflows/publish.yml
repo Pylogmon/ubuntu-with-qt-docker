@@ -16,8 +16,6 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Checkout
         uses: actions/checkout@v3.0.2
-        with:
-          ref: docker
       - name: Build and push
         uses: docker/build-push-action@v3
         with:
